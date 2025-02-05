@@ -196,90 +196,93 @@
 
 <!-- <div class="flex w-full">
     <div
-      class="w-1/2 flex justify-center items-center bg-blue-500"
-      style="background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);"
+        class="w-1/2 flex justify-center items-center bg-blue-500"
+        style="
+            background: url('../../../../assets/images/bg-left.png');
+            background-size: cover;
+        "
     >
-      <div class="text-center text-white">
-        <img
-          src="assets/images/login-illustration.svg"
-          alt="Login Illustration"
-          class="mx-auto w-2/3 mb-8"
-        />
-        <h1 class="text-4xl font-bold mb-4">Welcome Back!</h1>
-        <p>Login to continue.</p>
-      </div>
-    </div>
-  
-    <div class="w-1/2 flex flex-col justify-center items-center bg-white">
-      <h2 class="text-3xl font-bold text-blue-600 mb-6">
-        REVITALIST
-      </h2>
-      <form class="w-2/3">
-        <mat-form-field class="w-full">
-            <mat-label>Email address</mat-label>
-            <input
-                id="email"
-                matInput
-                [formControlName]="'email'">
-            <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                Email address is required
-            </mat-error>
-            <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                Please enter a valid email address
-            </mat-error>
-        </mat-form-field>
-
-  
-        <mat-form-field class="w-full">
-            <mat-label>Password</mat-label>
-            <input
-                id="password"
-                matInput
-                type="password"
-                [formControlName]="'password'"
-                #passwordField>
-            <button
-                mat-icon-button
-                type="button"
-                (click)="passwordField.type === 'password' ? passwordField.type = 'text' : passwordField.type = 'password'"
-                matSuffix>
-                <mat-icon
-                    class="icon-size-5"
-                    *ngIf="passwordField.type === 'password'"
-                    [svgIcon]="'heroicons_solid:eye'"></mat-icon>
-                <mat-icon
-                    class="icon-size-5"
-                    *ngIf="passwordField.type === 'text'"
-                    [svgIcon]="'heroicons_solid:eye-off'"></mat-icon>
-            </button>
-            <mat-error>
-                Password is required
-            </mat-error>
-        </mat-form-field>
-  
-        <a href="#" class="text-sm text-blue-600 mb-6 block text-right">
-          Forgot password?
-        </a>
-  
-        <button mat-raised-button color="primary" class="w-full">
-          Login
-        </button>
-  
-        <div class="flex items-center justify-center my-6">
-          <span class="w-1/2 h-px bg-gray-300"></span>
-          <span class="mx-4 text-gray-500">Or</span>
-          <span class="w-1/2 h-px bg-gray-300"></span>
+        <div class="text-center text-white">
+            <img
+                src="../../../../assets/images/login-img.png"
+                alt="Login Illustration"
+                class="mx-auto mb-8"
+            />
+            <h1 class="text-4xl font-bold mb-4">Welcome Back!</h1>
+            <p>Login to continue.</p>
         </div>
-  
-        <button mat-stroked-button class="w-full mb-4">
-          Create Patient Account
-        </button>
-        <button mat-stroked-button class="w-full mb-4">
-          Create Practitioner Account
-        </button>
-        <button mat-stroked-button class="w-full">
-          Request MagicLink?
-        </button>
-      </form>
     </div>
-  </div> -->
+
+    <div class="w-1/2 flex flex-col justify-center items-center bg-white">
+        <h2 class="text-3xl font-bold text-blue-600 mb-6">REVITALIST</h2>
+        <form class="w-1/2">
+            <mat-form-field class="w-full">
+                <mat-label>Email address</mat-label>
+                <input id="email" matInput [formControlName]="'email'" />
+                <mat-error *ngIf="signInForm.get('email').hasError('required')">
+                    Email address is required
+                </mat-error>
+                <mat-error *ngIf="signInForm.get('email').hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Password</mat-label>
+                <input
+                    id="password"
+                    matInput
+                    type="password"
+                    [formControlName]="'password'"
+                    #passwordField
+                />
+                <button
+                    mat-icon-button
+                    type="button"
+                    (click)="
+                        passwordField.type === 'password'
+                            ? (passwordField.type = 'text')
+                            : (passwordField.type = 'password')
+                    "
+                    matSuffix
+                >
+                    <mat-icon
+                        class="icon-size-5"
+                        *ngIf="passwordField.type === 'password'"
+                        [svgIcon]="'heroicons_solid:eye'"
+                    ></mat-icon>
+                    <mat-icon
+                        class="icon-size-5"
+                        *ngIf="passwordField.type === 'text'"
+                        [svgIcon]="'heroicons_solid:eye-off'"
+                    ></mat-icon>
+                </button>
+                <mat-error> Password is required </mat-error>
+            </mat-form-field>
+
+            <a href="#" class="text-sm text-blue-600 mb-6 block text-right">
+                Forgot password?
+            </a>
+
+            <button mat-raised-button color="primary" class="w-full">
+                Login
+            </button>
+
+            <div class="flex items-center justify-center my-6">
+                <span class="w-1/2 h-px bg-gray-300"></span>
+                <span class="mx-4 text-gray-500">Or</span>
+                <span class="w-1/2 h-px bg-gray-300"></span>
+            </div>
+
+            <button mat-stroked-button class="w-full mb-4">
+                Create Patient Account
+            </button>
+            <button mat-stroked-button class="w-full mb-4">
+                Create Practitioner Account
+            </button>
+            <button mat-stroked-button class="w-full">
+                Request MagicLink?
+            </button>
+        </form>
+    </div>
+</div> -->
